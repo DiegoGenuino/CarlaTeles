@@ -289,7 +289,7 @@ export const siteConfig = {
     professionalRole: 'Advogada Previdenciarista e Trabalhista',
     professionalDescription: 'Carla Teles atua em Direito Previdenciário e Trabalhista, com atenção às necessidades de segurados do INSS e trabalhadores. O escritório orienta sobre aposentadorias, benefícios por incapacidade, pensão por morte, BPC/LOAS e questões decorrentes das relações de trabalho. Atendimento presencial na Vila Mazzei, região do Tucuruvi, em São Paulo, e online para todo o Brasil, com análise individual de cada situação.',
     professionalImage: '/images/carla-teles-560.webp',
-    logo: { src: '/images/carla-teles-logo.svg', width: 460, height: 68, alt: 'Carla Teles Advocacia' },
+    logo: { src: '/images/carla-teles-logo.svg?v=2', width: 318, height: 68, alt: 'Carla Teles Advocacia' },
     registration: 'OAB/SP 404.353',
   },
   contact: {
