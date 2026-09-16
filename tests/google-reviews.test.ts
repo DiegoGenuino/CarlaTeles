@@ -6,6 +6,7 @@ import { resolveReviews } from '../src/services/google-reviews';
 
 const createSection = (): ReviewsSectionConfig => {
   const section: ReviewsSectionConfig = structuredClone(siteConfig.reviewsSection);
+  section.source = 'google';
   section.manualItems = Array.from({ length: 3 }, (_, index) => ({
     quote: `Comentário usado exclusivamente no teste automatizado ${index + 1}.`,
     name: `Autor de teste ${index + 1}`,

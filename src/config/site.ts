@@ -426,13 +426,16 @@ export const siteConfig = {
     ],
   },
   reviewsSection: {
-    // Avaliações públicas como fallback; Google Places ativo quando houver chave de produção.
+    // Avaliações completas cadastradas manualmente. Mary e Carla: textos fornecidos pelo cliente.
+    // Cláudio: avaliação do Google reproduzida em
+    // https://viatapida.com/advogados-previdenciarios/sao-paulo/carla-teles-advogada-especialista-em-beneficios-do-inss-e-causas-trabalhistas-atendimento-em-todo-brasil/
+    // Fotos originais dos perfis baixadas do googleusercontent.com.
     enabled: true,
     id: 'avaliacoes',
     title: 'O que nossos clientes',
     highlightedTitle: 'dizem',
     platformLogo: { src: '/images/google-icon.png', width: 41, height: 41, alt: 'Google' },
-    source: 'google',
+    source: 'manual',
     maxRating: 5,
     ratingUnavailableLabel: 'Avaliação não disponível',
     orderingNotice: 'Avaliações selecionadas por relevância pelo Google.',
@@ -447,28 +450,32 @@ export const siteConfig = {
     },
     manualItems: [
       {
-        quote: 'Advogada experiente, competente, honesta e transparente! …',
+        quote: 'Advogada experiente, competente, honesta e transparente! Honorários justos e acessíveis, muito educada e prestativa . Recomendo para as causas específicas....',
         name: 'Cláudio De oliveira santos',
-        details: 'Trecho de avaliação pública · Viatápida',
+        details: 'Avaliação no Google Maps',
         rating: 5,
-        avatar: '/images/google-icon.png',
+        avatar: '/images/reviewer-claudio.webp',
         avatarPosition: 'center',
+        googleMapsUrl: 'https://maps.app.goo.gl/ANnySc8E9jVp6zoz6',
       },
       {
-        quote: 'Atendimento excelente, soluções rápidas, ética profissional …',
-        name: 'Elizangela Silva',
-        details: 'Trecho de avaliação pública · Viatápida',
+        quote: 'Eu indico sem medo esses advogados maravilhosos e atenciosos...tive problema com minha aposentadoria e a Dra Carla se empenhou em me ajudar no meu processo com toda uma dedicação....teve momentos que tive três negativas achei que não fosse conseguir....mas graças a Deus em primeiro lugar e a Dra. Carla e Dr Gleidson consegui minha aposentadoria .... Pode contratar esses advogados ... são excelentes profissionais',
+        name: 'Mary e Nego',
+        details: 'Avaliação no Google Maps',
         rating: 5,
-        avatar: '/images/google-icon.png',
+        avatar: '/images/reviewer-mary-e-nego.webp',
         avatarPosition: 'center',
+        googleMapsUrl: 'https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChdDSUhNMG9nS0VJQ0FnSURfNUllNm5RRRAB!2m1!1s0x0:0x465a31bcffeb36bb!3m1!1s2@1:CIHM0ogKEICAgID_5Ie6nQE%7C%7C?hl=pt-BR',
+        authorProfileUrl: 'https://www.google.com/maps/contrib/117194384745189355557?hl=pt-BR',
       },
       {
-        quote: '… Fui muito bem atendido …',
-        name: 'Sheila Almeida',
-        details: 'Trecho de avaliação pública · Viatápida',
+        quote: 'Eu coloquei um processo pelo escritório pois conheço a Dr Carla e consegui resolver minha filha está com o processo na mão dela e estamos bem confiante pois não só depende dele e sim do judiciário mas o que ela pode fazer tirar sua dúvida não tenho de que reclamar!',
+        name: 'carla marli',
+        details: 'Avaliação no Google Maps',
         rating: 5,
-        avatar: '/images/google-icon.png',
+        avatar: '/images/reviewer-carla-marli.webp',
         avatarPosition: 'center',
+        googleMapsUrl: 'https://maps.app.goo.gl/ANnySc8E9jVp6zoz6',
       },
     ],
   },

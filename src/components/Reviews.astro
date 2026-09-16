@@ -38,7 +38,7 @@ const { items: reviews, hasGoogleReviews } = await resolveReviews(section, {
                 </svg>
               ))}
             </div>
-            {review.source === 'google' && review.googleMapsUrl ? (
+            {review.googleMapsUrl ? (
               <a class="review-source-link" href={review.googleMapsUrl} target="_blank" rel="noreferrer" aria-label={`Ver avaliação de ${review.name} no Google Maps`}>
                 <img class="review-google" src={platformLogo.src} width={platformLogo.width} height={platformLogo.height} alt="" aria-hidden="true" loading="lazy" decoding="async" />
               </a>
@@ -52,7 +52,7 @@ const { items: reviews, hasGoogleReviews } = await resolveReviews(section, {
           </blockquote>
 
           <footer class="review-author">
-            {review.source === 'google' && review.authorProfileUrl ? (
+            {review.authorProfileUrl ? (
               <a class="review-author-avatar" href={review.authorProfileUrl} target="_blank" rel="noreferrer" aria-label={`Ver perfil de ${review.name} no Google Maps`}>
                 <img src={review.avatar} width="34" height="34" alt="" style={`object-position: ${review.avatarPosition}`} loading="lazy" decoding="async" />
               </a>
@@ -60,7 +60,7 @@ const { items: reviews, hasGoogleReviews } = await resolveReviews(section, {
               <img src={review.avatar} width="34" height="34" alt="" style={`object-position: ${review.avatarPosition}`} loading="lazy" decoding="async" />
             )}
             <div>
-              {review.source === 'google' && review.authorProfileUrl ? (
+              {review.authorProfileUrl ? (
                 <a class="review-author-name" href={review.authorProfileUrl} target="_blank" rel="noreferrer"><strong>{review.name}</strong></a>
               ) : (
                 <strong>{review.name}</strong>
