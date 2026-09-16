@@ -1,9 +1,21 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { siteConfig } from '../src/config/site';
+import type { ReviewsSectionConfig } from '../src/config/site';
 import { resolveReviews } from '../src/services/google-reviews';
 
-const createSection = () => structuredClone(siteConfig.reviewsSection);
+const createSection = (): ReviewsSectionConfig => {
+  const section: ReviewsSectionConfig = structuredClone(siteConfig.reviewsSection);
+  section.manualItems = Array.from({ length: 3 }, (_, index) => ({
+    quote: `Comentário usado exclusivamente no teste automatizado ${index + 1}.`,
+    name: `Autor de teste ${index + 1}`,
+    details: 'Dados fictícios exclusivos dos testes',
+    rating: 5,
+    avatar: section.fallbacks.avatar,
+    avatarPosition: 'center',
+  }));
+  return section;
+};
 
 test('usa o fallback manual quando a chave da API não foi configurada', async () => {
   const section = createSection();
